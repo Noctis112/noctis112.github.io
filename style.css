@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+body{
+    background-color: #333333;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    overflow: hidden;
+}
+
+.navbar{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-top: 1%;
+}
+
+.navbar > div {
+    text-align: center;
+    text-decoration-line: underline;
+}
+
+#work {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    min-height: 30vh;
+    padding-top: 10vh;
+}
+
+#work > div{
+    text-align: center;
+}
+
+.hiddenEsq{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.hiddenDir{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translate(100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate(0);
+}
+
+.work:nth-child(2){
+    transition-delay: 200ms;
+}
+.work:nth-child(3){
+    transition-delay: 400ms;
+}
